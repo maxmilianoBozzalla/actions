@@ -9,3 +9,20 @@ jobs:
     steps:
       - name: Hola mundo
         run: echo "Hola mundo"
+
+      - name: touch file
+        run: touch file.txt
+
+      - name: Set text
+        run: echo "Hola mundo" >> file.txt
+
+      - name: Read file
+        run: cat file.txt
+
+
+  other:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Adios mundo
+        run: echo "Adios mundo"
