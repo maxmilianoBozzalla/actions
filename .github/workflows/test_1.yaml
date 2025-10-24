@@ -36,6 +36,8 @@ jobs:
     needs: [hola] 
 
     steps:
-      - name: Adios mundo
-        run: echo "Adios mundo"
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+      - name: LS
+        run: ls -al
 
