@@ -1,7 +1,7 @@
 name: Hola mundo
 
 # trigger the workflow on push events
-on: [push]
+on: [push, pull_request]
 
 jobs:
   hola:
