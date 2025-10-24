@@ -26,3 +26,11 @@ jobs:
     steps:
       - name: Adios mundo
         run: echo "Adios mundo"
+
+
+  other:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Adios mundo
+        run: echo "Adios mundo"
