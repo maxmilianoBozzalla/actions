@@ -10,7 +10,7 @@ jobs:
       mysql:
         image: mysqli:5.7
         env:
-          MYSQLI_ROOT_PASSWORD: example
+          MYSQL_ROOT_PASSWORD: example
         ports:
           - 3306:3306
             
