@@ -19,6 +19,10 @@ jobs:
       - name: Java version
         run: java -version
 
+      - name: ls
+        uses: ./.github/actions/my-action
+        
+
         
       #- name: ls
       #  run: |
