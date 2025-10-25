@@ -14,13 +14,13 @@ jobs:
         uses: actions/setup-java@v5.0.0
         with:
             distribution: 'temurin'
-            java-version: '21'
+            java-version: '17'
 
       - name: Java version
         run: java -version
 
         
-      - name: ls
-        run: |
-          chmod +x script.sh
-            ./script.sh
+      #- name: ls
+      #  run: |
+      #    chmod +x script.sh
+      #      ./script.sh
