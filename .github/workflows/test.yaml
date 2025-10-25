@@ -9,8 +9,11 @@ jobs:
     services:
       mysql:
         image: mysqli:5.7
-        
-
+        env:
+          MYSQLI_ROOT_PASSWORD: example
+        ports:
+          - 3306:3306
+            
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
