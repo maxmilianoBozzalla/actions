@@ -10,6 +10,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5.0.0
 
+      - name: Setup Java JDK
+        uses: actions/setup-java@v5.0.0
+        with:
+            distribution: 'temurin'
+            java-version: '17'
+
+      - name: Java version
+        run: java -version
+
+        
       - name: ls
         run: |
           chmod +x script.sh
