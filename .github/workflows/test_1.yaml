@@ -1,6 +1,16 @@
 name: Hola mundo
 
-on: [push]
+# trigger the workflow on push events
+#on: [push, pull_request]
+
+on:
+  push:
+    branches:
+      - main
+
+  #pull_request:
+  #  branches:
+  #    - main    
 
 jobs:
   hola:
@@ -22,9 +32,12 @@ jobs:
 
   other:
     runs-on: ubuntu-latest
-    needs: [hola]
+    # esta job depende de la job "hola" (Al finalizar "hola" se ejecuta "other")
+    needs: [hola] 
 
     steps:
-      - name: Adios mundo
-        run: echo "Adios mundo"
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+      - name: LS
+        run: ls -al
 
